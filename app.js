@@ -315,7 +315,7 @@ function sendTextMessage(recipientId, messageText) {
       id: recipientId
     },
     message: {
-      text: "test kembali" //messageText
+      text: messageText
     }
   };
 
