@@ -206,26 +206,27 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
-    switch (messageText) {
-      case 'image':
-        sendImageMessage(senderID);
-        break;
+    // switch (messageText) {
+    //   case 'image':
+    //     sendImageMessage(senderID);
+    //     break;
 
-      case 'button':
-        sendButtonMessage(senderID);
-        break;
+    //   case 'button':
+    //     sendButtonMessage(senderID);
+    //     break;
 
-      case 'generic':
-        sendGenericMessage(senderID);
-        break;
+    //   case 'generic':
+    //     sendGenericMessage(senderID);
+    //     break;
 
-      case 'receipt':
-        sendReceiptMessage(senderID);
-        break;
+    //   case 'receipt':
+    //     sendReceiptMessage(senderID);
+    //     break;
 
-      default:
-        sendTextMessage(senderID, messageText);
-    }
+    //   default:
+    //     sendTextMessage(senderID, messageText);
+    // }
+    sendTextMessage(senderID, messageText);
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
   }
@@ -296,7 +297,7 @@ function sendImageMessage(recipientId) {
       attachment: {
         type: "image",
         payload: {
-          // url: "http://i.imgur.com/zYIlgBl.png"
+          url: "http://i.imgur.com/zYIlgBl.png"
         }
       }
     }
