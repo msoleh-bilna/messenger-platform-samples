@@ -296,7 +296,7 @@ function sendImageMessage(recipientId) {
       attachment: {
         type: "image",
         payload: {
-          url: "http://i.imgur.com/zYIlgBl.png"
+          // url: "http://i.imgur.com/zYIlgBl.png"
         }
       }
     }
